@@ -1,16 +1,28 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
     entry: './index.ts',
     output: {
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'output'),
-        library: 'MyVue3ComponentLibrary',
-        libraryTarget: 'umd',
-        umdNamedDefine: true,
-        globalObject: 'typeof self !== \'undefined\' ? self : this'
+        filename: 'aurora-design.js',
+        library: {
+            name: 'AuroraDesign',
+            type: 'umd',
+            umdNamedDefine: true,
+        },
+        globalObject: 'typeof self !== \'undefined\' ? self : this',
+    },
+    externals: {
+        vue: 'Vue'
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.vue', '.json'],
+        alias: {
+            '@': path.resolve(__dirname),
+        },
     },
     module: {
         rules: [
@@ -23,24 +35,22 @@ module.exports = {
                 loader: 'ts-loader',
                 options: {
                     appendTsSuffixTo: [/\.vue$/],
+                    configFile: path.resolve(__dirname, 'tsconfig.json'),
                 }
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             }
         ]
     },
-    resolve: {
-        extensions: ['.ts', '.js', '.vue', '.json'],
-        alias: {
-            'vue': '@vue/runtime-dom'
-        }
-    },
-    externals: {
-        vue: 'Vue'
-    },
     plugins: [
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'aurora-design.css'
+        })
     ]
 };
