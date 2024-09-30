@@ -3,12 +3,12 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     mode: 'production',
-    entry: './src/index.ts',
+    entry: './index.ts',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'output'),
         library: 'MyVue3ComponentLibrary',
-        libraryTarget: 'es',
+        libraryTarget: 'umd',
         umdNamedDefine: true,
         globalObject: 'typeof self !== \'undefined\' ? self : this'
     },

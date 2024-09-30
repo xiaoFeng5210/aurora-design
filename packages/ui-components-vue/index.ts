@@ -2,7 +2,7 @@
 import { App } from 'vue'
 import Counter from './test/Counter.vue'
 
-export { Counter }
+export { Counter }  
 
 export default {
 	install: (app: App): void => {
