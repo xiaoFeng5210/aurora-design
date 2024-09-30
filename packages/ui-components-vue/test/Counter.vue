@@ -1,5 +1,6 @@
 <template>
   <div class="counter">
+    <p>This is a counter component</p>
     <h2>{{ title }}</h2>
     <p>Count: {{ count }}</p>
     <button @click="increment">Increment</button>
@@ -54,6 +55,7 @@ export default defineComponent({
 <style scoped>
 .counter {
   font-family: Arial, sans-serif;
+  width: 300px;
   max-width: 300px;
   margin: 0 auto;
   text-align: center;

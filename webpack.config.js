@@ -10,13 +10,19 @@ module.exports = {
         filename: 'aurora-design.js',
         library: {
             name: 'AuroraDesign',
-            type: 'module',
+            type: 'umd',
+            export: 'default',  // 确保导出默认导出
             umdNamedDefine: true,
         },
         globalObject: 'typeof self !== \'undefined\' ? self : this',
     },
     externals: {
-        vue: 'Vue'
+        // vue: {
+        //     commonjs: 'vue',
+        //     commonjs2: 'vue',
+        //     amd: 'vue',
+        //     root: 'Vue'
+        // }
     },
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
