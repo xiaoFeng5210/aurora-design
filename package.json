@@ -2,10 +2,16 @@
   "name": "aurora-design",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "output/aurora-design.js",
+  "module": "output/aurora-design.js",
+  "types": "output/types/index.d.ts",
+  "style": "output/aurora-design.css",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack && tsc --emitDeclarationOnly --outDir output/types"
   },
+  "files": [
+    "output"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,7 +31,7 @@
     "vue": "^3.5.10"
   },
   "dependencies": {
-    "@vue/compiler-sfc": "^3.2.0",
+    "@vue/compiler-sfc": "^3.3.4",
     "css-loader": "^6.2.0",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.5",

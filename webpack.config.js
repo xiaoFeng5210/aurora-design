@@ -10,7 +10,7 @@ module.exports = {
         filename: 'aurora-design.js',
         library: {
             name: 'AuroraDesign',
-            type: 'umd',
+            type: 'module',
             umdNamedDefine: true,
         },
         globalObject: 'typeof self !== \'undefined\' ? self : this',
@@ -32,11 +32,17 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                loader: 'ts-loader',
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                    configFile: path.resolve(__dirname, 'tsconfig.json'),
-                }
+                use: [
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                            appendTsSuffixTo: [/\.vue$/],
+                            configFile: path.resolve(__dirname, 'tsconfig.json'),
+                        }
+                    }
+                ],
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,

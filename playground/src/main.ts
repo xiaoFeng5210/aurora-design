@@ -1,7 +1,11 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import AuroraComponents from '../../packages/ui-components-vue/index'
+import UIComponent from "../../output/aurora-design.js";
+import "../../output/aurora-design.css";
 
-createApp(App).mount('#app').use(AuroraComponents)
+console.log(UIComponent)
+createApp(App)
+	.use(UIComponent)
+	.mount('#app')
 
