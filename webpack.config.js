@@ -22,12 +22,13 @@ module.exports = {
         globalObject: 'typeof self !== \'undefined\' ? self : this',
     },
     externals: {
-        // vue: {
-        //     commonjs: 'vue',
-        //     commonjs2: 'vue',
-        //     amd: 'vue',
-        //     root: 'Vue'
-        // }
+        vue: {
+            root: 'Vue',
+            commonjs: 'vue',
+            commonjs2: 'vue',
+            amd: 'vue',
+            module: 'vue'  // 添加这一行以支持 ESM
+        }
     },
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
@@ -39,7 +40,10 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    scopeId: true
+                }
             },
             {
                 test: /\.ts$/,

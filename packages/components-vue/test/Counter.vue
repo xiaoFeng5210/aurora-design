@@ -9,25 +9,23 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
-
-export default defineComponent({
-  name: 'Counter',
-  props: {
-    initialCount: {
-      type: Number,
-      default: 0
-    },
-    title: {
-      type: String,
-      default: 'Counter'
-    }
-  },
-  setup(props) {
+<script lang="ts" setup>
+import { ref, computed } from 'vue'
+    
+    const props = defineProps({
+      title: {
+        type: String,
+        default: 'Counter'
+      },
+      initialCount: {
+        type: Number,
+        default: 0
+      }
+    })
     const count = ref(props.initialCount)
 
     const increment = () => {
+      console.log('增加')
       count.value++
     }
 
@@ -40,16 +38,6 @@ export default defineComponent({
     }
 
     const isEven = computed(() => count.value % 2 === 0)
- 
-    return {
-      count,
-      increment,
-      decrement,
-      reset,
-      isEven
-    }
-  }
-})
 </script>
 
 <style scoped>
