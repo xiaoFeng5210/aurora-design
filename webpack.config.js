@@ -3,16 +3,21 @@ const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    experiments: {
+        outputModule: true,
+    },
     mode: 'production',
     entry: './index.ts',
     output: {
         path: path.resolve(__dirname, 'output'),
-        filename: 'aurora-design.js',
+        // filename: 'aurora-design.js',
+        filename: 'aurora-design.esm.js',
         library: {
-            name: 'AuroraDesign',
-            type: 'umd',
-            export: 'default',  // 确保导出默认导出
-            umdNamedDefine: true,
+            // name: 'AuroraDesign',
+            // type: 'umd',
+            // export: 'named',  // 确保导出命名导出
+            // umdNamedDefine: true,
+            type: 'module',
         },
         globalObject: 'typeof self !== \'undefined\' ? self : this',
     },

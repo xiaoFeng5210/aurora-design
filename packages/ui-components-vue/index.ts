@@ -8,5 +8,5 @@ export default {
 	install: (app: App): void => {
 		app.component('Counter', Counter)
 	},
-	Counter
+	// Counter
 }

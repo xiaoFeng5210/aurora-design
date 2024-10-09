@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "output/aurora-design.js",
-  "module": "output/aurora-design.js",
+  "module": "output/aurora-design.esm.js",
   "types": "output/types/index.d.ts",
   "style": "output/aurora-design.css",
   "scripts": {

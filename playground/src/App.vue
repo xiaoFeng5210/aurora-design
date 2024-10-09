@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import {Counter} from '../../packages/ui-components-vue/index'
-
+import {Counter} from '../../output/aurora-design.esm'
 </script>
 
 <template>
