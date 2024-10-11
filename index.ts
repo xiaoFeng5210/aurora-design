@@ -1,15 +1,15 @@
+import type { App } from 'vue'
 // 如果需要默认导出
-import { AuVirtualScrolling, Counter } from '@/packages/components-vue/index'
-import {App} from "vue";
+import { AuVirtualScrolling, Counter } from '@/packages/components/index'
 
 export {
-	Counter,
-	AuVirtualScrolling
+  AuVirtualScrolling,
+  Counter,
 }
 
 export default {
-	install: (app: App): void => {
-		app.component('Counter', Counter)
-	},
-	// Counter
+  install: (app: App): void => {
+    app.component('Counter', Counter)
+  },
+  // Counter
 }
