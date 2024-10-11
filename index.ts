@@ -1,9 +1,10 @@
 // 如果需要默认导出
-import { Counter } from '@/packages/components-vue/index'
+import { AuVirtualScrolling, Counter } from '@/packages/components-vue/index'
 import {App} from "vue";
 
 export {
-	Counter
+	Counter,
+	AuVirtualScrolling
 }
 
 export default {

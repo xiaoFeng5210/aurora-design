@@ -10,7 +10,6 @@ module.exports = {
     entry: './index.ts',
     output: {
         path: path.resolve(__dirname, 'output'),
-        // filename: 'aurora-design.js',
         filename: 'aurora-design.esm.js',
         library: {
             // name: 'AuroraDesign',

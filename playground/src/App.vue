@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import {Counter} from '../../output/aurora-design.esm'
+import {AuVirtualScrolling} from '../../output/aurora-design.esm'
+
+function plus() {
+}
 </script>
 
 <template>
   <div>
-    <Counter />
+    <AuVirtualScrolling />
   </div>
 </template>
 
