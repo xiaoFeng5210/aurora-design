@@ -17,7 +17,7 @@ const delayList = Array.from({ length: 1000 }, (_, index) => ({ id: index, text:
 
     <div>
       <button>
-        <InlineLoading fill-color="red" />
+        <InlineLoading fill-color="black" />
         测试loading
       </button>
     </div>
