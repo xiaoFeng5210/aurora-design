@@ -6,9 +6,10 @@ interface ListItemType {
   [key: string]: any
 }
 
-const { maxCount = 1000, list } = defineProps<{
-  maxCount?: number
+const { maxCount = 1000, sliceUnit = 1, list } = defineProps<{
   list: ListItemType[]
+  maxCount?: number
+  sliceUnit?: number
 }>()
 
 defineSlots<{
@@ -30,7 +31,7 @@ onUnmounted(() => {
 })
 
 function update() {
-  frameCount.value += 1
+  frameCount.value += sliceUnit >= maxCount ? maxCount : sliceUnit
   if (frameCount.value < maxCount) {
     rafId = requestAnimationFrame(update)
   }
@@ -47,6 +48,6 @@ function update() {
 
 <style scoped>
 .render_delay_layout {
-
+height: auto;
 }
 </style>
