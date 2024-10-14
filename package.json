@@ -22,7 +22,7 @@
 
   "homepage": "git+https://github.com/xiaoFeng5210/aurora-design",
   
-  "author": "",
+  "author": "aurora_coder_photography",
   "license": "ISC",
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
