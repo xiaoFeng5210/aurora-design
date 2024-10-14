@@ -1,5 +1,5 @@
 {
-  "name": "aurora-design",
+  "name": "aurora-design-solution",
   "version": "0.0.1",
   "description": "前端领域的一些解决方案（包含组件库，函数方法）",
   "main": "output/aurora-design.js",

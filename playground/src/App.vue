@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DelayedRendering } from '../../output/aurora-design.esm'
+import { DelayedRendering } from 'aurora-design-solution'
 
 const delayList = Array.from({ length: 1000 }, (_, index) => ({ id: index, text: `Item: ${index}` }))
 </script>
