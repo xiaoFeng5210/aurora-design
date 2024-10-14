@@ -1,7 +1,7 @@
 {
   "name": "aurora-design",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "前端领域的一些解决方案（包含组件库，函数方法）",
   "main": "output/aurora-design.js",
   "module": "output/aurora-design.esm.js",
   "types": "output/types/index.d.ts",
@@ -12,7 +12,16 @@
   "files": [
     "output"
   ],
-  "keywords": [],
+  "keywords": [
+    "vue", "vue组件库", "业务组件", "vue3", "长列表", "延迟渲染" 
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoFeng5210/aurora-design"
+  },
+
+  "homepage": "git+https://github.com/xiaoFeng5210/aurora-design",
+  
   "author": "",
   "license": "ISC",
   "devDependencies": {

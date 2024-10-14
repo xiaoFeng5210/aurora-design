@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DelayedRendering from '../../packages/components/delayed-rendering/DelayedRendering.vue'
+import { DelayedRendering } from '../../output/aurora-design.esm'
 
 const delayList = Array.from({ length: 1000 }, (_, index) => ({ id: index, text: `Item: ${index}` }))
 </script>
