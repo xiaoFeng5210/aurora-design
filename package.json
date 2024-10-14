@@ -1,6 +1,6 @@
 {
   "name": "aurora-design-solution",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "前端领域的一些解决方案（包含组件库，函数方法）",
   "main": "output/aurora-design.js",
   "module": "output/aurora-design.esm.js",
@@ -13,7 +13,7 @@
     "output"
   ],
   "keywords": [
-    "vue", "vue组件库", "业务组件", "vue3", "长列表", "延迟渲染" 
+    "vue", "vue组件库", "业务组件", "vue3", "长列表", "延迟渲染"
   ],
   "repository": {
     "type": "git",
