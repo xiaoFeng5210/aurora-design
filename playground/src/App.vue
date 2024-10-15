@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { DelayedRendering } from 'aurora-design-solution'
-import { InlineLoading } from '../../output/aurora-design.esm'
+import { BreakpointUpload, InlineLoading } from '../../output/aurora-design.esm'
 
 const delayList = Array.from({ length: 1000 }, (_, index) => ({ id: index, text: `Item: ${index}` }))
 </script>
@@ -20,6 +20,10 @@ const delayList = Array.from({ length: 1000 }, (_, index) => ({ id: index, text:
         <InlineLoading fill-color="black" />
         测试loading
       </button>
+    </div>
+
+    <div>
+      <BreakpointUpload />
     </div>
   </div>
 </template>

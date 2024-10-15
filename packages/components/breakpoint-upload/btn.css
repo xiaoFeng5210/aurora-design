@@ -1,3 +1,28 @@
+ul { padding: 0; margin: 0; list-style-type: none; }
+.upload { width: 600px; margin: 0 auto; }
+.form { padding: 12px 0 30px; }
+.file { position: absolute; width: 230px; height: 34px; cursor: pointer; opacity: 0; }
+.file:hover + .btn-info { background-color: #39b3d7; border-color: #269abc; }
+[type="submit"] { width: 100px; margin-left: 260px; float: right; visibility: hidden; }
+.upload_ul { display: none; width: 100%; border: 1px solid #bbb; background-color: #fff; font-size: 12px; }
+.upload_ul > li { display: table-row; opacity: 1; overflow: hidden; -webkit-transition: opacity .2s; transition: opacity .2s;
+    background-image:-webkit-linear-gradient(top, #ABD9FF, #88C9FF);
+    background-image:        linear-gradient(to bottom, #ABD9FF, #88C9FF);
+    -moz-background-size: 0% 100%;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+.upload_title { color: #666; background-color: #f0f0f0; }
+.upload_cell { display: table-cell; padding: 5px 10px; border-top: 1px solid #ddd; vertical-align:middle; }
+.upload_cell:first-child { width: 50%; }
+.waiting{ color: #999; }
+.uploading { color: #069; }
+.canceling { color: #CE4625; }
+.success { color: green; }
+.error { color: #f30; }
+.remind { padding: 5px 10px; background-color: #eee; margin-top: 40px; color: #666; font-size: 12px;}
+
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -369,3 +394,4 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
     width: 100%;
 }
+
