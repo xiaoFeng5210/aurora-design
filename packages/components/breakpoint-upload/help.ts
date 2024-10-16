@@ -17,8 +17,6 @@ export function chooseFile(event: any) {
       filesArray.push(id)
       filesArray[id] = file
     }
-
-    console.log(filesArray)
   }
   else {
     throw new Error('请选择文件')
