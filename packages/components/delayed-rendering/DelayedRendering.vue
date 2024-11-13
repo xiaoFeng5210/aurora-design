@@ -31,7 +31,7 @@ onUnmounted(() => {
 })
 
 function update() {
-  frameCount.value += sliceUnit >= maxCount ? maxCount : sliceUnit
+  frameCount.value += (sliceUnit >= maxCount ? maxCount : sliceUnit)
   if (frameCount.value < maxCount) {
     rafId = requestAnimationFrame(update)
   }
